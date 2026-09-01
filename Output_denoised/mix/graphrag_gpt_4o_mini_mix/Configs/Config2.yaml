@@ -1,0 +1,25 @@
+llm:
+  api_type: "openai" # or openai
+  base_url: 'https://api.laozhang.ai/v1'
+  model: "gpt-4o-mini"
+  api_key: "sk-RjzXPWzqc4qw4ESOCe8dE23f3aA447C7B995Db02E997FbD5"
+
+embedding:
+  api_type: "openai"  # or  ollama / openai.
+  base_url: 'https://api.laozhang.ai/v1'  # or forward url / other llm url
+  api_key: "sk-RjzXPWzqc4qw4ESOCe8dE23f3aA447C7B995Db02E997FbD5"
+  model: "text-embedding-3-small"
+  cache_dir: ""
+  dimensions: 1024
+  max_token_size: 8102
+  embed_batch_size: 128
+  embedding_func_max_async: 16
+ 
+data_root:  ./Data # Root directory for data
+
+
+working_dir: ./Output_denoised #Result directory for the denoised experiments
+#working_dir: ./Output # Result directory for the experiment
+exp_name:  graphrag_gpt_4o_mini_mix # Experiment name
+# 
+#
