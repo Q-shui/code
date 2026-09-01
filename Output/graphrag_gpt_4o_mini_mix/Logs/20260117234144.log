@@ -1,0 +1,26 @@
+2026-01-17 23:41:59.915 | INFO     | Core.Chunk.DocChunk:build_chunks:27 - Starting chunk the given documents
+2026-01-17 23:42:00.120 | INFO     | Core.Storage.ChunkKVStorage:_persist:105 - Writing data into ./Output/mix/kg_graph/chunk_storage_chunk_data_idx.pkl and ./Output/mix/kg_graph/chunk_storage_chunk_data_key.pkl
+2026-01-17 23:42:00.132 | INFO     | Core.Chunk.DocChunk:build_chunks:74 - ✅ Finished the chunking stage
+2026-01-17 23:42:00.146 | INFO     | Core.GraphRAG:_update_costs_info:205 - Chunking stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-17 23:42:00.146 | INFO     | Core.GraphRAG:_update_costs_info:207 - Chunking time(s): 0.23
+2026-01-17 23:42:00.147 | INFO     | Core.Graph.BaseGraph:build_graph:41 - Starting build graph for the given documents
+2026-01-17 23:42:00.147 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:27 - Attempting to load the graph from: ./Output/mix/kg_graph/graph_storage_nx_data.graphml
+2026-01-17 23:42:01.438 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:31 - Successfully loaded graph from: ./Output/mix/kg_graph/graph_storage_nx_data.graphml with 10595 nodes and 8523 edges
+2026-01-17 23:42:01.438 | INFO     | Core.Graph.BaseGraph:build_graph:50 - ✅ Finished the graph building stage
+2026-01-17 23:42:01.438 | INFO     | Core.GraphRAG:_update_costs_info:205 - Build Graph stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-17 23:42:01.438 | INFO     | Core.GraphRAG:_update_costs_info:207 - Build Graph time(s): 1.29
+2026-01-17 23:42:02.118 | INFO     | Core.Index.BaseIndex:build_index:13 - Starting insert elements of the given graph into vector database
+2026-01-17 23:42:02.118 | INFO     | Core.Index.BaseIndex:build_index:17 - Loading index from the file ./Output/mix/kg_graph/entities_vdb
+2026-01-17 23:43:52.316 | INFO     | Core.Index.BaseIndex:build_index:29 - ✅ Finished starting insert entities of the given graph into vector database
+2026-01-17 23:43:52.536 | INFO     | Core.Community.BaseCommunity:cluster:46 - Starting build community of the given graph
+2026-01-17 23:43:52.553 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV ./Output/mix/kg_graph/community_storage_community_node_map.json with 4664 data
+2026-01-17 23:43:52.553 | INFO     | Core.Community.LeidenCommunity:_load_cluster_map:279 - ✅ Successfully loaded community <-> node map.
+2026-01-17 23:43:52.557 | INFO     | Core.Community.BaseCommunity:generate_community_report:26 - Generating community report...
+2026-01-17 23:43:53.319 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV ./Output/mix/kg_graph/community_storage_community_report.json with 856 data
+2026-01-17 23:43:53.424 | INFO     | Core.Community.LeidenCommunity:_load_community_report:263 - Successfully loaded community report.
+2026-01-17 23:43:53.425 | INFO     | Core.Community.BaseCommunity:generate_community_report:34 - ✅ [Community Report]  Finished
+2026-01-17 23:43:53.425 | INFO     | Core.GraphRAG:_update_costs_info:205 - Index Building stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-17 23:43:53.425 | INFO     | Core.GraphRAG:_update_costs_info:207 - Index Building time(s): 111.99
+2026-01-17 23:43:53.425 | INFO     | Core.GraphRAG:_build_retriever_context:176 - Building retriever context for the current execution
+2026-01-17 23:43:53.431 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:100 - Retrieved 512 communities
+2026-01-17 23:43:53.570 | INFO     | Core.Query.BaseQuery:_map_global_communities:117 - Grouping to 18 groups for global search

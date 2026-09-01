@@ -1,0 +1,234 @@
+2026-01-18 16:27:26.421 | INFO     | Core.Chunk.DocChunk:build_chunks:27 - Starting chunk the given documents
+2026-01-18 16:27:26.618 | INFO     | Core.Storage.ChunkKVStorage:_persist:105 - Writing data into ./Output/mix/kg_graph/chunk_storage_chunk_data_idx.pkl and ./Output/mix/kg_graph/chunk_storage_chunk_data_key.pkl
+2026-01-18 16:27:26.628 | INFO     | Core.Chunk.DocChunk:build_chunks:74 - ✅ Finished the chunking stage
+2026-01-18 16:27:26.636 | INFO     | Core.GraphRAG:_update_costs_info:205 - Chunking stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-18 16:27:26.636 | INFO     | Core.GraphRAG:_update_costs_info:207 - Chunking time(s): 0.22
+2026-01-18 16:27:26.636 | INFO     | Core.Graph.BaseGraph:build_graph:41 - Starting build graph for the given documents
+2026-01-18 16:27:26.636 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:27 - Attempting to load the graph from: ./Output/mix/kg_graph/graph_storage_nx_data.graphml
+2026-01-18 16:27:27.627 | INFO     | Core.Storage.NetworkXStorage:load_nx_graph:31 - Successfully loaded graph from: ./Output/mix/kg_graph/graph_storage_nx_data.graphml with 10595 nodes and 8523 edges
+2026-01-18 16:27:27.627 | INFO     | Core.Graph.BaseGraph:build_graph:50 - ✅ Finished the graph building stage
+2026-01-18 16:27:27.628 | INFO     | Core.GraphRAG:_update_costs_info:205 - Build Graph stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-18 16:27:27.628 | INFO     | Core.GraphRAG:_update_costs_info:207 - Build Graph time(s): 0.99
+2026-01-18 16:27:28.085 | INFO     | Core.Index.BaseIndex:build_index:13 - Starting insert elements of the given graph into vector database
+2026-01-18 16:27:28.085 | INFO     | Core.Index.BaseIndex:build_index:17 - Loading index from the file ./Output/mix/kg_graph/entities_vdb
+2026-01-18 16:29:00.084 | INFO     | Core.Index.BaseIndex:build_index:29 - ✅ Finished starting insert entities of the given graph into vector database
+2026-01-18 16:29:00.297 | INFO     | Core.Community.BaseCommunity:cluster:46 - Starting build community of the given graph
+2026-01-18 16:29:00.309 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV ./Output/mix/kg_graph/community_storage_community_node_map.json with 4664 data
+2026-01-18 16:29:00.310 | INFO     | Core.Community.LeidenCommunity:_load_cluster_map:279 - ✅ Successfully loaded community <-> node map.
+2026-01-18 16:29:00.313 | INFO     | Core.Community.BaseCommunity:generate_community_report:26 - Generating community report...
+2026-01-18 16:29:01.038 | INFO     | Core.Storage.JsonKVStorage:load:33 - Load KV ./Output/mix/kg_graph/community_storage_community_report.json with 856 data
+2026-01-18 16:29:01.163 | INFO     | Core.Community.LeidenCommunity:_load_community_report:263 - Successfully loaded community report.
+2026-01-18 16:29:01.163 | INFO     | Core.Community.BaseCommunity:generate_community_report:34 - ✅ [Community Report]  Finished
+2026-01-18 16:29:01.163 | INFO     | Core.GraphRAG:_update_costs_info:205 - Index Building stage cost: Total prompt token: 0, Total completeion token: 0, Total cost: 0
+2026-01-18 16:29:01.163 | INFO     | Core.GraphRAG:_update_costs_info:207 - Index Building time(s): 93.54
+2026-01-18 16:29:01.163 | INFO     | Core.GraphRAG:_build_retriever_context:176 - Building retriever context for the current execution
+2026-01-18 16:29:01.170 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:29:01.347 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:29:08.625 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.003 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17279, completion_tokens: 248
+2026-01-18 16:29:09.778 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.005 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16866, completion_tokens: 253
+2026-01-18 16:29:09.872 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.008 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17270, completion_tokens: 254
+2026-01-18 16:29:10.259 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.011 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16648, completion_tokens: 273
+2026-01-18 16:29:10.271 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.014 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16851, completion_tokens: 286
+2026-01-18 16:29:10.415 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.016 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16930, completion_tokens: 298
+2026-01-18 16:29:10.471 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.019 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16870, completion_tokens: 282
+2026-01-18 16:29:10.712 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.022 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17000, completion_tokens: 251
+2026-01-18 16:29:11.328 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.024 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17170, completion_tokens: 282
+2026-01-18 16:29:11.511 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.027 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16803, completion_tokens: 289
+2026-01-18 16:29:11.536 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.030 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16972, completion_tokens: 288
+2026-01-18 16:29:11.574 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.033 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17020, completion_tokens: 354
+2026-01-18 16:29:12.548 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.035 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17084, completion_tokens: 345
+2026-01-18 16:29:12.640 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.038 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16778, completion_tokens: 333
+2026-01-18 16:29:12.644 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.041 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17053, completion_tokens: 294
+2026-01-18 16:29:16.222 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.043 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16662, completion_tokens: 316
+2026-01-18 16:29:17.270 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.046 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17004, completion_tokens: 302
+2026-01-18 16:29:24.702 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.049 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16843, completion_tokens: 322
+2026-01-18 16:29:37.776 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.050 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 5506, completion_tokens: 581
+2026-01-18 16:29:37.781 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:29:37.957 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:29:45.412 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.053 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16867, completion_tokens: 286
+2026-01-18 16:29:46.730 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.056 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17171, completion_tokens: 347
+2026-01-18 16:29:46.798 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.058 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17021, completion_tokens: 331
+2026-01-18 16:29:47.066 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.061 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16871, completion_tokens: 374
+2026-01-18 16:29:47.994 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.064 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16779, completion_tokens: 397
+2026-01-18 16:29:48.149 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.067 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17005, completion_tokens: 360
+2026-01-18 16:29:48.292 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.069 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16844, completion_tokens: 419
+2026-01-18 16:29:48.444 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.072 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17085, completion_tokens: 384
+2026-01-18 16:29:48.840 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.075 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16931, completion_tokens: 368
+2026-01-18 16:29:49.238 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.078 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16649, completion_tokens: 309
+2026-01-18 16:29:49.843 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.080 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16852, completion_tokens: 401
+2026-01-18 16:29:49.998 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.083 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17054, completion_tokens: 428
+2026-01-18 16:29:50.417 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.086 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17280, completion_tokens: 338
+2026-01-18 16:29:50.661 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.089 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16973, completion_tokens: 416
+2026-01-18 16:29:51.208 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.092 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16804, completion_tokens: 437
+2026-01-18 16:29:57.642 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.094 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17271, completion_tokens: 329
+2026-01-18 16:30:00.822 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.097 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16663, completion_tokens: 426
+2026-01-18 16:30:05.442 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.100 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17001, completion_tokens: 298
+2026-01-18 16:30:21.026 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.101 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 7001, completion_tokens: 634
+2026-01-18 16:30:21.038 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:30:21.265 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:30:29.653 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.104 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17273, completion_tokens: 380
+2026-01-18 16:30:29.968 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.107 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16846, completion_tokens: 387
+2026-01-18 16:30:30.478 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.110 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17056, completion_tokens: 377
+2026-01-18 16:30:30.561 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.112 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17003, completion_tokens: 345
+2026-01-18 16:30:31.080 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.115 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16806, completion_tokens: 385
+2026-01-18 16:30:31.138 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.118 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16933, completion_tokens: 354
+2026-01-18 16:30:31.728 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.121 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17282, completion_tokens: 350
+2026-01-18 16:30:31.964 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.123 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16975, completion_tokens: 340
+2026-01-18 16:30:32.179 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.126 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17007, completion_tokens: 399
+2026-01-18 16:30:32.298 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.129 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16651, completion_tokens: 383
+2026-01-18 16:30:33.203 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.132 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16869, completion_tokens: 391
+2026-01-18 16:30:33.583 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.135 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16854, completion_tokens: 383
+2026-01-18 16:30:34.271 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.137 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16665, completion_tokens: 403
+2026-01-18 16:30:34.946 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.140 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16873, completion_tokens: 349
+2026-01-18 16:30:36.205 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.143 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16781, completion_tokens: 454
+2026-01-18 16:30:36.208 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.146 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17023, completion_tokens: 450
+2026-01-18 16:30:42.691 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.148 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17087, completion_tokens: 374
+2026-01-18 16:30:45.122 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.151 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17173, completion_tokens: 369
+2026-01-18 16:30:59.134 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.153 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 7062, completion_tokens: 622
+2026-01-18 16:30:59.142 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:30:59.362 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:31:07.921 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.155 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17057, completion_tokens: 344
+2026-01-18 16:31:08.230 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.158 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16807, completion_tokens: 342
+2026-01-18 16:31:08.777 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.161 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16666, completion_tokens: 343
+2026-01-18 16:31:08.869 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.164 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17088, completion_tokens: 354
+2026-01-18 16:31:08.940 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.166 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16976, completion_tokens: 340
+2026-01-18 16:31:09.364 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.169 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16870, completion_tokens: 347
+2026-01-18 16:31:09.908 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.172 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17004, completion_tokens: 328
+2026-01-18 16:31:10.144 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.175 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17283, completion_tokens: 358
+2026-01-18 16:31:10.403 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.177 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17008, completion_tokens: 358
+2026-01-18 16:31:10.450 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.180 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17024, completion_tokens: 353
+2026-01-18 16:31:10.733 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.183 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16934, completion_tokens: 365
+2026-01-18 16:31:10.808 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.186 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16855, completion_tokens: 377
+2026-01-18 16:31:11.234 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.188 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17174, completion_tokens: 361
+2026-01-18 16:31:11.735 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.191 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16782, completion_tokens: 378
+2026-01-18 16:31:11.947 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.194 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16652, completion_tokens: 359
+2026-01-18 16:31:12.857 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.197 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16847, completion_tokens: 378
+2026-01-18 16:31:20.308 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.199 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16874, completion_tokens: 382
+2026-01-18 16:31:20.975 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.202 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17274, completion_tokens: 367
+2026-01-18 16:31:34.181 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.204 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 6641, completion_tokens: 624
+2026-01-18 16:31:34.190 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:31:34.383 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:31:43.189 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.206 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17002, completion_tokens: 289
+2026-01-18 16:31:43.608 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.209 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16998, completion_tokens: 331
+2026-01-18 16:31:43.634 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.212 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16646, completion_tokens: 289
+2026-01-18 16:31:44.061 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.214 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16864, completion_tokens: 292
+2026-01-18 16:31:44.210 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.217 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16970, completion_tokens: 290
+2026-01-18 16:31:44.243 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.220 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17268, completion_tokens: 298
+2026-01-18 16:31:44.273 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.223 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17018, completion_tokens: 299
+2026-01-18 16:31:44.318 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.225 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16868, completion_tokens: 316
+2026-01-18 16:31:44.497 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.228 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17082, completion_tokens: 307
+2026-01-18 16:31:44.637 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.231 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16776, completion_tokens: 313
+2026-01-18 16:31:44.872 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.234 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16660, completion_tokens: 331
+2026-01-18 16:31:44.942 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.236 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17168, completion_tokens: 279
+2026-01-18 16:31:45.525 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.239 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16841, completion_tokens: 316
+2026-01-18 16:31:45.605 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.242 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16801, completion_tokens: 275
+2026-01-18 16:31:48.031 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.244 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16849, completion_tokens: 246
+2026-01-18 16:31:51.933 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.247 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17277, completion_tokens: 319
+2026-01-18 16:31:52.100 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.250 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16928, completion_tokens: 333
+2026-01-18 16:31:52.897 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.253 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17051, completion_tokens: 290
+2026-01-18 16:32:02.317 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.254 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 5892, completion_tokens: 403
+2026-01-18 16:32:02.326 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:32:02.478 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:32:09.317 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.256 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16652, completion_tokens: 321
+2026-01-18 16:32:11.416 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.259 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16807, completion_tokens: 373
+2026-01-18 16:32:12.257 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.262 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17057, completion_tokens: 314
+2026-01-18 16:32:12.782 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.265 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16855, completion_tokens: 349
+2026-01-18 16:32:12.795 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.267 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16874, completion_tokens: 392
+2026-01-18 16:32:13.182 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.270 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17088, completion_tokens: 344
+2026-01-18 16:32:13.216 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.273 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16782, completion_tokens: 377
+2026-01-18 16:32:13.643 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.276 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17174, completion_tokens: 342
+2026-01-18 16:32:13.855 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.279 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17024, completion_tokens: 434
+2026-01-18 16:32:14.164 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.281 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16870, completion_tokens: 352
+2026-01-18 16:32:14.691 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.284 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17274, completion_tokens: 355
+2026-01-18 16:32:15.998 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.287 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16847, completion_tokens: 407
+2026-01-18 16:32:16.179 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.290 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17008, completion_tokens: 382
+2026-01-18 16:32:16.247 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.292 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17283, completion_tokens: 373
+2026-01-18 16:32:17.675 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.295 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17004, completion_tokens: 291
+2026-01-18 16:32:20.968 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.298 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16934, completion_tokens: 321
+2026-01-18 16:32:23.264 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.301 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16976, completion_tokens: 335
+2026-01-18 16:32:23.724 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.303 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16666, completion_tokens: 355
+2026-01-18 16:32:38.036 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.305 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 6622, completion_tokens: 567
+2026-01-18 16:32:38.046 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:32:38.175 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:32:44.979 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.307 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16976, completion_tokens: 199
+2026-01-18 16:32:45.089 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.310 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17088, completion_tokens: 269
+2026-01-18 16:32:45.929 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.313 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16934, completion_tokens: 219
+2026-01-18 16:32:46.477 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.316 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17008, completion_tokens: 314
+2026-01-18 16:32:47.147 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.318 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17024, completion_tokens: 296
+2026-01-18 16:32:47.519 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.321 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16847, completion_tokens: 282
+2026-01-18 16:32:47.597 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.324 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16874, completion_tokens: 273
+2026-01-18 16:32:47.945 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.326 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16666, completion_tokens: 328
+2026-01-18 16:32:48.158 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.329 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17174, completion_tokens: 363
+2026-01-18 16:32:48.339 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.332 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17283, completion_tokens: 317
+2026-01-18 16:32:48.440 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.335 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16652, completion_tokens: 339
+2026-01-18 16:32:48.492 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.337 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16855, completion_tokens: 326
+2026-01-18 16:32:50.687 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.340 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16807, completion_tokens: 360
+2026-01-18 16:32:51.229 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.343 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16782, completion_tokens: 374
+2026-01-18 16:32:52.730 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.346 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17057, completion_tokens: 294
+2026-01-18 16:32:53.377 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.348 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17274, completion_tokens: 322
+2026-01-18 16:32:57.760 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.351 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16870, completion_tokens: 243
+2026-01-18 16:32:59.239 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.354 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17004, completion_tokens: 303
+2026-01-18 16:33:17.465 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.355 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 5644, completion_tokens: 611
+2026-01-18 16:33:17.478 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:33:17.695 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:33:26.763 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.358 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16778, completion_tokens: 372
+2026-01-18 16:33:26.978 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.360 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16866, completion_tokens: 293
+2026-01-18 16:33:27.090 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.363 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16972, completion_tokens: 341
+2026-01-18 16:33:27.174 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.366 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17000, completion_tokens: 260
+2026-01-18 16:33:27.340 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.369 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16843, completion_tokens: 321
+2026-01-18 16:33:27.439 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.371 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17020, completion_tokens: 340
+2026-01-18 16:33:27.546 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.374 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17084, completion_tokens: 348
+2026-01-18 16:33:27.696 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.377 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17170, completion_tokens: 341
+2026-01-18 16:33:27.822 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.380 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17279, completion_tokens: 324
+2026-01-18 16:33:28.049 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.382 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16803, completion_tokens: 324
+2026-01-18 16:33:28.245 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.385 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16648, completion_tokens: 387
+2026-01-18 16:33:28.649 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.388 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17004, completion_tokens: 321
+2026-01-18 16:33:28.733 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.391 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16930, completion_tokens: 318
+2026-01-18 16:33:28.813 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.393 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17270, completion_tokens: 322
+2026-01-18 16:33:28.950 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.396 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16662, completion_tokens: 330
+2026-01-18 16:33:29.204 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.399 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16851, completion_tokens: 349
+2026-01-18 16:33:32.427 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.402 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17053, completion_tokens: 334
+2026-01-18 16:33:32.698 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.404 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16870, completion_tokens: 294
+2026-01-18 16:33:45.119 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.406 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 6354, completion_tokens: 541
+2026-01-18 16:33:45.130 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:33:45.261 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:33:53.271 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.408 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17284, completion_tokens: 280
+2026-01-18 16:33:53.522 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.411 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16875, completion_tokens: 291
+2026-01-18 16:33:53.696 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.414 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16935, completion_tokens: 329
+2026-01-18 16:33:53.787 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.416 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16848, completion_tokens: 302
+2026-01-18 16:33:54.368 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.419 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17058, completion_tokens: 300
+2026-01-18 16:33:55.006 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.422 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17009, completion_tokens: 301
+2026-01-18 16:33:55.080 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.425 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17089, completion_tokens: 355
+2026-01-18 16:33:55.271 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.427 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17025, completion_tokens: 287
+2026-01-18 16:33:55.368 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.430 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17275, completion_tokens: 362
+2026-01-18 16:33:55.399 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.433 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16871, completion_tokens: 344
+2026-01-18 16:33:55.951 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.436 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16667, completion_tokens: 374
+2026-01-18 16:33:55.969 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.438 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16977, completion_tokens: 330
+2026-01-18 16:33:56.223 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.441 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16856, completion_tokens: 312
+2026-01-18 16:33:56.466 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.444 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16653, completion_tokens: 320
+2026-01-18 16:33:58.087 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.447 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16783, completion_tokens: 311
+2026-01-18 16:33:59.786 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.449 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16808, completion_tokens: 341
+2026-01-18 16:34:02.534 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.452 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17005, completion_tokens: 329
+2026-01-18 16:34:09.338 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.455 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17175, completion_tokens: 338
+2026-01-18 16:34:25.565 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.456 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 6014, completion_tokens: 605
+2026-01-18 16:34:25.573 | INFO     | Core.Retriever.CommunityRetriever:find_relevant_community_by_level:112 - Retrieved 512 communities
+2026-01-18 16:34:25.773 | INFO     | Core.Query.BaseQuery:_map_global_communities:155 - Grouping to 18 groups for global search
+2026-01-18 16:34:31.899 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.459 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17019, completion_tokens: 222
+2026-01-18 16:34:32.097 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.461 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17278, completion_tokens: 217
+2026-01-18 16:34:32.409 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.464 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17052, completion_tokens: 162
+2026-01-18 16:34:32.588 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.467 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16929, completion_tokens: 197
+2026-01-18 16:34:32.682 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.469 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16971, completion_tokens: 196
+2026-01-18 16:34:33.455 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.472 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16865, completion_tokens: 223
+2026-01-18 16:34:33.557 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.475 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16850, completion_tokens: 257
+2026-01-18 16:34:33.910 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.478 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16999, completion_tokens: 232
+2026-01-18 16:34:33.963 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.480 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16647, completion_tokens: 237
+2026-01-18 16:34:34.402 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.483 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17083, completion_tokens: 276
+2026-01-18 16:34:34.480 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.486 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16802, completion_tokens: 240
+2026-01-18 16:34:34.834 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.488 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16869, completion_tokens: 250
+2026-01-18 16:34:34.930 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.491 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17269, completion_tokens: 249
+2026-01-18 16:34:36.112 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.494 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16661, completion_tokens: 237
+2026-01-18 16:34:36.166 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.496 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16842, completion_tokens: 272
+2026-01-18 16:34:36.696 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.499 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17169, completion_tokens: 330
+2026-01-18 16:34:37.259 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.502 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 16777, completion_tokens: 311
+2026-01-18 16:34:43.536 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.504 | Max budget: $10.000 | Current cost: $0.003, prompt_tokens: 17003, completion_tokens: 268
+2026-01-18 16:35:03.203 | INFO     | Core.Common.CostManager:update_cost:57 - Total running cost: $0.506 | Max budget: $10.000 | Current cost: $0.001, prompt_tokens: 4604, completion_tokens: 599
