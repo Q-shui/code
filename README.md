@@ -1,12 +1,10 @@
 # Diffusion-Inspired Graph Refinement for Robust Reasoning in GraphRAG
 
-This repository contains the paper-oriented experimental code for DGRAG ablation studies, extended from the DIGIMON / GraphRAG unified framework. On top of the original GraphRAG construction, retrieval, question answering, and evaluation pipeline, this project adds graph-diffusion-based edge pruning, denoised graph generation, structural metric analysis, random-pruning and metadata-pruning baselines, and scripts for producing paper-ready result tables.
-
 ## Overview
 
 The project has two main workflows:
 
-1. GraphRAG pipeline: load a dataset, build chunks, construct the entity-relation graph, build vector indexes and community information, then run QA and automatic evaluation.
+1. GraphRAG pipeline: load a dataset, build chunks, construct the entity-relation graph, build vector indexes and community information, then run QA and automatic evaluation.https://github.com/JayLZhou/GraphRAG
 2. DGRAG denoising: load a graph diffusion checkpoint on a pre-built GraphRAG graph, predict which edges should be kept or removed, and export the denoised GraphML graph together with structural metrics.
 
 The default method configuration is `Option/Method/GGraphRAG.yaml`, and the global configuration is `Option/Config2.yaml`. The main GraphRAG entry point is `main.py`; graph diffusion training and inference scripts are under `train/graph_diffusion/`.
